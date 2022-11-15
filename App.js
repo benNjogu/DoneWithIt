@@ -1,13 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
-  console.log("App executed");
+  const handlePress = () => console.log("Text clicked");
 
   return (
-    <SafeAreaView style={styles.container}>
-      <Text>Hello React Native Android</Text>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <Text numberOfLines={1} onPress={handlePress}>
+        Hello React Native Android - A really long text. This should be even
+        longer for the observation to be made effectively
+      </Text>
+    </View>
   );
 }
 
@@ -15,5 +18,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
