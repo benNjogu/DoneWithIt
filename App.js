@@ -1,17 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import {
-  StyleSheet,
-  Text,
-  TouchableHighlight,
-  Image,
-  View,
-} from "react-native";
+import { StyleSheet, Text, TouchableOpacity, Image, View } from "react-native";
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Text>Hello React Native Android</Text>
-      <TouchableHighlight onPress={() => console.log("image tapped")}>
+      <TouchableOpacity onPress={() => console.log("image tapped")}>
         <Image
           source={{
             width: 200,
@@ -19,7 +13,7 @@ export default function App() {
             uri: "https://picsum.photos/200/300",
           }}
         />
-      </TouchableHighlight>
+      </TouchableOpacity>
     </View>
   );
 }
