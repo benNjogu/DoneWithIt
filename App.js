@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, SafeAreaView, View, Button } from "react-native";
+import { StyleSheet, SafeAreaView, Button } from "react-native";
 
 export default function App() {
   return (
@@ -7,7 +7,7 @@ export default function App() {
       <Button
         color={"orange"}
         title="Click Me"
-        onPress={() => console.log("Button Tapped")}
+        onPress={() => alert("Button Tapped")}
       />
     </SafeAreaView>
   );
