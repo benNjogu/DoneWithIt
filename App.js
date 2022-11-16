@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import {
   StyleSheet,
   Text,
-  TouchableNativeFeedback,
+  TouchableHighlight,
   Image,
   View,
 } from "react-native";
@@ -11,11 +11,15 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Hello React Native Android</Text>
-      <TouchableNativeFeedback onPress={() => console.log("image tapped")}>
-        <View
-          style={{ width: 200, height: 70, backgroundColor: "dodgerblue" }}
-        ></View>
-      </TouchableNativeFeedback>
+      <TouchableHighlight onPress={() => console.log("image tapped")}>
+        <Image
+          source={{
+            width: 200,
+            height: 300,
+            uri: "https://picsum.photos/200/300",
+          }}
+        />
+      </TouchableHighlight>
     </View>
   );
 }
