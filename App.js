@@ -1,6 +1,7 @@
-import { StyleSheet, StatusBar, View, Platform } from "react-native";
+import { StyleSheet, StatusBar, View, Platform, Text } from "react-native";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
+import { React } from "react";
 
 export default function App() {
   return (
@@ -11,22 +12,21 @@ export default function App() {
         alignItems: "center",
       }}
     >
-      <View
+      <Text
         style={{
-          backgroundColor: "dodgerblue",
-          width: 100,
-          height: 100,
-          shadowColor: "grey",
-          shadowOffset: {
-            width: 0,
-            height: 10,
-          },
-          shadowOpacity: 1,
-          shadowRadius: 10,
-          elevation: 20,
+          fontSize: 30,
+          fontFamily: "Roboto",
+          fontStyle: "italic",
+          fontWeight: "bold",
+          color: "tomato",
+          textTransform: "capitalize",
+          //textDecorationLine: "line-through",
+          textAlign: "right",
+          lineHeight: 60,
         }}
-      ></View>
+      >
+        I Love React Native! This is my first React Native App.
+      </Text>
     </View>
   );
 }
-
