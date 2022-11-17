@@ -7,26 +7,37 @@ export default function App() {
   return (
     <View
       style={{
-        flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        flex: 1,
       }}
     >
-      <Text
+      <View
         style={{
-          fontSize: 30,
-          fontFamily: "Roboto",
-          fontStyle: "italic",
-          fontWeight: "bold",
-          color: "tomato",
-          textTransform: "capitalize",
-          //textDecorationLine: "line-through",
-          textAlign: "right",
-          lineHeight: 60,
+          backgroundColor: "dodgerblue",
+          width: 100,
+          height: 100,
+          padding: 25,
+          paddingHorizontal: 10,
+          paddingLeft: 30,
+          margin: 20,
         }}
       >
-        I Love React Native! This is my first React Native App.
-      </Text>
+        <View
+          style={{
+            backgroundColor: "gold",
+            width: 50,
+            height: 50,
+          }}
+        ></View>
+      </View>
+      <View
+        style={{
+          backgroundColor: "tomato",
+          width: 100,
+          height: 100,
+        }}
+      ></View>
     </View>
   );
 }
