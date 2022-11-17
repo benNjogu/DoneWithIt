@@ -8,10 +8,13 @@ import {
   View,
   Platform,
 } from "react-native";
-import { useDimensions } from "@react-native-community/hooks";
+import {
+  useDimensions,
+  useDeviceOrientation,
+} from "@react-native-community/hooks";
 
 export default function App() {
-  console.log(useDimensions());
+  console.log(useDeviceOrientation());
 
   return (
     <SafeAreaView style={[styles.container]}>
