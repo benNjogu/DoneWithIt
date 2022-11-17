@@ -11,18 +11,15 @@ export default function App() {
           flexDirection: "row",
           justifyContent: "center", //main/primary axis
           alignItems: "center", //secondary axis
-          alignContent: "center",
-          flexWrap: "wrap",
         },
       ]}
     >
       <View
         style={{
           backgroundColor: "dodgerblue",
-          flexBasis: 100,
-          flexGrow: 1,
-          //width: 100,
+          width: 300,
           height: 100,
+          flexShrink: 1,
         }}
       />
       <View
