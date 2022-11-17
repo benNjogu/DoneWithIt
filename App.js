@@ -9,6 +9,8 @@ export default function App() {
           backgroundColor: "#fff",
           flex: 1,
           flexDirection: "row",
+          justifyContent: "center", //main/primary axis
+          alignItems: "center", //secondary axis
         },
       ]}
     >
@@ -16,14 +18,15 @@ export default function App() {
         style={{
           backgroundColor: "dodgerblue",
           width: 100,
-          height: 100,
+          height: 300,
+          alignSelf: "flex-start",
         }}
       />
       <View
         style={{
           backgroundColor: "gold",
           width: 100,
-          height: 100,
+          height: 200,
         }}
       />
       <View
