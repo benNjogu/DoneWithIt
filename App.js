@@ -2,8 +2,7 @@ import { StyleSheet, StatusBar, View, Platform, Text } from "react-native";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import { React } from "react";
-
-import AppText from "./app/components/AppText";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function App() {
   return (
@@ -14,7 +13,7 @@ export default function App() {
         alignItems: "center",
       }}
     >
-      <AppText>I Love React Native!</AppText>
+      <MaterialCommunityIcons name="email" size={200} color={"dodgerblue"} />
     </View>
   );
 }
