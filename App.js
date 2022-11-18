@@ -1,6 +1,4 @@
-import { StyleSheet, StatusBar, View, Platform, Text } from "react-native";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
+import { View } from "react-native";
 import { React } from "react";
 
 import AppText from "./app/components/AppText";
