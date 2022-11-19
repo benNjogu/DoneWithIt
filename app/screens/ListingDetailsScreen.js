@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     fontWeight: "500",
   },
   userContainer: {
-    marginVertical: 32,
+    marginVertical: 40,
   },
 });
 
