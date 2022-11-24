@@ -9,8 +9,10 @@ import Screen from "./../components/Screen";
 const initialMessages = [
   {
     id: 1,
-    title: "T1",
-    description: "D1",
+    title:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Veritatis sunt ex distinctio temporibus. Quibusdam autem blanditiis, reprehenderit quae error neque?",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit debitis, rem minus sint eos corporis labore autem ea quia unde. Ab doloribus, itaque molestiae dolorem quam quaerat repellendus a ipsa repudiandae, obcaecati debitis ullam dolor quod distinctio exercitationem!Atque voluptate, facilis aliquid nobis dolorem tempora recusandae aliquam eius veniam delectus!",
     image: require("../assets/mosh.jpg"),
   },
   {
