@@ -9,6 +9,7 @@ import {
   SubmitButton,
 } from "../components/forms";
 import Screen from "../components/Screen";
+import CategoryPickerItem from "./../components/CategoryPickerItem";
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label("Title"),
@@ -49,6 +50,7 @@ function ListingEditScreen(props) {
           items={categories}
           name="category"
           placeHolder="Category"
+          PickerItemComponent={CategoryPickerItem}
           width="50%"
         />
         <AppFormField
