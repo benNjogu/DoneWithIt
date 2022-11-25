@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import * as ImagePicker from "expo-image-picker";
 
 import Screen from "./app/components/Screen";
-import AppText from "./app/components/AppText";
+import { Button, Image } from "react-native";
 
 export default function App() {
+  const [imageUri, setImageUri] = useState();
+
   const requestPermission = async () => {
     const { granted } = await ImagePicker.requestMediaLibraryPermissionsAsync();
     if (!granted)
@@ -15,9 +17,19 @@ export default function App() {
     requestPermission();
   }, []);
 
+  const selectImage = async () => {
+    try {
+      const result = await ImagePicker.launchImageLibraryAsync();
+      if (!result.canceled) setImageUri(result.assets[0].uri);
+    } catch (error) {
+      console.log("Error reading an image", error);
+    }
+  };
+
   return (
     <Screen>
-      <AppText>Hello</AppText>
+      <Button title="Select Image" onPress={selectImage} />
+      <Image source={{ uri: imageUri }} style={{ width: 250, height: 250 }} />
     </Screen>
   );
 }
