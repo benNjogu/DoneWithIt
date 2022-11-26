@@ -32,15 +32,7 @@ const StackNavigator = () => (
       backgroundColor: "dodgerblue",
     }}
   >
-    <Stack.Screen
-      name="Tweets"
-      component={Tweets}
-      options={{
-        headerStyle: { backgroundColor: "tomato" },
-        headerTintColor: "white",
-        headerShown: false,
-      }}
-    />
+    <Stack.Screen name="Tweets" component={Tweets} />
     <Stack.Screen
       name="TweetDetails"
       options={({ route }) => ({ title: route.params.id })}
@@ -67,7 +59,7 @@ const TabNavigator = () => (
   >
     <Tab.Screen
       name="Feed"
-      component={Tweets}
+      component={StackNavigator}
       options={{
         tabBarIcon: ({ color, size }) => (
           <MaterialCommunityIcons name="home" size={size} color={color} />
