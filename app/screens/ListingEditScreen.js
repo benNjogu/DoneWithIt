@@ -8,6 +8,7 @@ import {
   AppFormPicker,
   SubmitButton,
 } from "../components/forms";
+import AppFormImagePicker from "../components/forms/AppFormImagePicker";
 import Screen from "../components/Screen";
 import CategoryPickerItem from "./../components/CategoryPickerItem";
 
@@ -16,8 +17,9 @@ const validationSchema = Yup.object().shape({
   price: Yup.number().required().min(1).max(10000).label("Price"),
   description: Yup.string().label("Description"),
   category: Yup.object().required().nullable().label("Category"),
+  images: Yup.array().min(1, "Select at least one image."),
 });
- 
+
 const categories = [
   {
     backgroundColor: "#fc5c65",
@@ -84,10 +86,12 @@ function ListingEditScreen(props) {
           price: "",
           description: "",
           category: null,
+          images: [],
         }}
         onSubmit={(values) => console.log(values)}
         validationSchema={validationSchema}
       >
+        <AppFormImagePicker name="images" />
         <AppFormField maxLength={255} name="title" placeHolder="Title" />
         <AppFormField
           keyboardType="numeric"
