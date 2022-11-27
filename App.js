@@ -8,6 +8,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Screen from "./app/components/Screen";
 import AuthNavigator from "./app/navigation/AuthNavigator";
 import NavigationTheme from "./app/navigation/NavigationTheme";
+import AppNavigator from "./app/navigation/AppNavigator";
 
 const Tweets = ({ navigation }) => (
   <Screen>
@@ -75,7 +76,7 @@ const TabNavigator = () => (
 export default function App() {
   return (
     <NavigationContainer theme={NavigationTheme}>
-      <AuthNavigator />
+      <AppNavigator />
     </NavigationContainer>
   );
 }
