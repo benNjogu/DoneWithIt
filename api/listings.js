@@ -6,3 +6,4 @@ const getListings = () => client.get(endPoint);
 export default {
   getListings,
 };
+ 
