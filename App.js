@@ -1,8 +1,6 @@
 import React from "react";
 import NetInfo, { useNetInfo } from "@react-native-community/netinfo";
-import { AsyncStorage, Button, View } from "react-native";
-
-//import AsyncStorage from "@react-native-async-storage/async-storage";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function App() {
   const demo = async () => {
