@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { StyleSheet, FlatList, ActivityIndicator } from "react-native";
 
 import colors from "../../config/colors";
